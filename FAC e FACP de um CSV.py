@@ -7,7 +7,7 @@ import numpy as np
 import warnings
 warnings.filterwarnings('ignore')
 
-#defione o tamanho da imagem
+#define o tamanho da imagem
 plt.rcParams['figure.figsize'] = [10, 7.5]
 
 #cria um sample com 1000 valores
