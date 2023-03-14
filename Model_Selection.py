@@ -112,3 +112,4 @@ for i in range(0,len(validated_models)):
 			
 print(low_bic)
 print(final_model)
+
