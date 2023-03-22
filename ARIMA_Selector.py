@@ -48,7 +48,7 @@ Retorna uma matriz em que a primeira linha são os valores de FAC, a segunda os 
 acf_values = acf(arma_train_diff, qstat=True, alpha=0.05)
 
 ar_level = 0
-#para cada lag de 1 até o tamanho do vetor de lags, printe o valor na tela e, se estiver fora do intervalo de confiança, some 1 na variável para vermos o "nível" do MA
+#para cada lag de 1 até o tamanho do vetor de lags, printe o valor na tela e, se estiver fora do intervalo de confiança, some 1 na variável para vermos o "nível" do AR
 for lag in range(1, len(acf_values[0])):
 	#print(acf_values[0][lag])
 	if((acf_values[0][lag]>top_limit) or (acf_values[0][lag]<bottom_limit)):
