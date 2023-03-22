@@ -15,22 +15,8 @@ import warnings
 warnings.filterwarnings('ignore')
 
 
-'''
-função usada apenas para reduzir o tamanho do código ao definir a escala do gráfico
-start = onde o gráfico começa
-stop = onde o gráfico termina
-steps = de quanto em quanto os valores devem aparecer no gráfico
-'''
-
-def xrange(start, stop, step):
-	plt.xticks(np.arange(start, stop, step))
-
-def yrange(start, stop, step):
-	plt.yticks(np.arange(start, stop, step))
-
-
 #atribui os valores do arquivo csv ao vetor arma
-arma = pd.read_csv('historicowege.csv')
+arma = pd.read_csv('data.csv')
 #vamos deixar 30 dados para comparar com a previsão do modelo
 data_selector = (arma.index < len(arma)-30)
 arma_train = arma[data_selector].copy()
