@@ -72,7 +72,7 @@ print('MA: ' + str(ma_level))
 #Cria uma lista com vetores de duas posições (inicialmente zeradas) que serão os modelos arma_train_diff que passarem no Ljung Box
 validated_models = []
 
-#range(start, stop, step): stop em intervalo aberto. Preciso das combinações incluindo o 0
+#range(start, stop, step): stop em intervalo aberto. Preciso das combinações com 0, excluindo-se 0,0
 for ar in range(ar_level,-1,-1):
 	for ma in range(ma_level,-1,-1):
 		if (ma==0) and (ar==0):
