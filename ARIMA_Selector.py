@@ -16,11 +16,13 @@ warnings.filterwarnings('ignore')
 
 
 #atribui os valores do arquivo csv ao vetor arma
-arma = pd.read_csv('data.csv')
+arma = pd.read_csv('data.csv', index_col=False, sep=",", decimal=".")
+arma = arma.iloc[::-1]
 #vamos deixar 30 dados para comparar com a previsão do modelo (coloquei 0 porque não tratei de previsões nesse código)
 #data_selector = (arma.index < len(arma)-30)
 data_selector = (arma.index < len(arma)-0)
 arma_train = arma[data_selector].copy()
+print(arma_train)
 arma_test = arma[~data_selector].copy()
 
 
@@ -146,4 +148,3 @@ acf_res = plot_acf(residuals)
 pacf_res = plot_pacf(residuals)
 
 plt.show()
-
